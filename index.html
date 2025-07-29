@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trống Không - Đặt chỗ đậu xe thông minh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Trống Không</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Trang chủ</a>
+                <a href="#owner-section" class="nav-link">Dành cho chủ bãi xe</a>
+                <a href="#pricing" class="nav-link">Bảng giá gửi xe</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img
+        class="fit-picture"
+        id = "main-logo"
+        src="logo.jpg"
+        alt="Logo" />
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Trống Không? giúp biến chỗ trống thành chỗ đậu xe có thể đặt trước</h1>
+                <p class="hero-description">
+                    Tìm kiếm và đặt chỗ đỗ xe nhanh chóng, tiện lợi. Đăng ký cho thuê chỗ đỗ xe dễ dàng và tăng thu nhập từ không gian trống của bạn.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn--primary btn--lg" id="find-parking-btn">Tìm chỗ để xe</button>
+                    <button class="btn btn--outline btn--lg" id="register-parking-btn">Đăng kí cho thuê chỗ để xe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Parking Lots -->
+    <section id="booking" class="featured-parking">
+        <div class="container">
+            <h2 class="section-title">Bãi đỗ xe nổi bật</h2>
+            <div class="parking-grid" id="parking-grid">
+                <!-- Parking lots will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Carousel -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Khách hàng nói gì về chúng tôi</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-container">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="testimonial-navigation">
+                    <button class="testimonial-nav-btn prev-btn" id="prev-testimonial">
+                        <span>‹</span>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots">
+                        <!-- Dots will be populated by JavaScript -->
+                    </div>
+                    <button class="testimonial-nav-btn next-btn" id="next-testimonial">
+                        <span>›</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">BẢNG GIÁ GỬI XE</h2>
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Loại dịch vụ</th>
+                            <th>2 giờ đầu</th>
+                            <th>Giờ tiếp theo</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="service-type">
+                                <strong>Tiêu chuẩn</strong>
+                            </td>
+                            <td class="price-cell">35.000đ</td>
+                            <td class="price-cell">20.000đ/giờ</td>
+                            <td class="notes-cell">Bao gồm camera giám sát</td>
+                        </tr>
+                        <tr>
+                            <td class="service-type">
+                                <strong>Cao cấp</strong>
+                            </td>
+                            <td class="price-cell">40.000đ</td>
+                            <td class="price-cell">25.000đ/giờ</td>
+                            <td class="notes-cell">Camera, che nắng, garage</td>
+                        </tr>
+                        <tr>
+                            <td class="service-type">
+                                <strong>Gói tuần</strong>
+                            </td>
+                            <td class="price-cell">30.000đ</td>
+                            <td class="price-cell">20.000đ/giờ</td>
+                            <td class="notes-cell">Trả trước 7 × 30.000đ</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="service-fee-row">
+                            <td colspan="4" class="service-fee">
+                                <strong>Phí dịch vụ: 2.000đ/lần đặt (cho khách hàng - chủ xe)</strong>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="pricing-note">
+                <p><em>* Giá trên đã bao gồm thuế VAT. Khách hàng thanh toán qua ứng dụng hoặc tại bãi xe.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Process -->
+    <section id="owner-section" class="booking-process">
+        <div class="container">
+            <h2 class="section-title">ĐẶT CHỖ VỚI TRỐNG KHÔNG CHỈ 3 BƯỚC ĐƠN GIẢN</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Tìm kiếm bãi xe gần bạn</h3>
+                    <p>Tìm kiếm và lựa chọn bãi đỗ xe phù hợp với vị trí và nhu cầu của bạn.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Chọn thời gian và đặt chỗ</h3>
+                    <p>Chọn thời gian cần đỗ xe và thực hiện thanh toán an toàn, nhanh chóng.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Thanh toán và nhận xác nhận</h3>
+                    <p>Nhận xác nhận đặt chỗ qua email và sẵn sàng đến bãi đỗ xe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên hệ với chúng tôi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Thông tin liên lạc</h3>
+                    <div class="contact-item">
+                        <strong>Email:</strong> info@trongkhong.vn
+                    </div>
+                    <div class="contact-item">
+                        <strong>Điện thoại:</strong> +84 123 456 789
+                    </div>
+                    <div class="contact-item">
+                        <strong>Địa chỉ:</strong> 123 Đường Nguyễn Văn Linh, TP.HCM
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Họ và tên *</label>
+                        <input type="text" id="contact-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email *</label>
+                        <input type="email" id="contact-email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Tin nhắn *</label>
+                        <textarea id="contact-message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trống Không</h3>
+                    <p>Giải pháp đặt chỗ đỗ xe thông minh và tiện lợi cho mọi người.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Dịch vụ</h4>
+                    <ul>
+                        <li>Tìm chỗ đỗ xe</li>
+                        <li>Đặt chỗ trước</li>
+                        <li>Cho thuê chỗ đỗ</li>
+                        <li>Hỗ trợ 24/7</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>Email: info@trongkhong.vn</p>
+                    <p>Điện thoại: +84 123 456 789</p>
+                    <p>Địa chỉ: 123 Đường Nguyễn Văn Linh, TP.HCM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trống Không. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Find Parking Modal -->
+    <div class="modal hidden" id="find-parking-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tìm chỗ đỗ xe</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="search-form" id="search-form">
+                <div class="form-group">
+                    <label for="search-location" class="form-label">Địa điểm *</label>
+                    <input type="text" id="search-location" class="form-control" placeholder="Nhập địa chỉ cần tìm chỗ đỗ xe" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="search-date" class="form-label">Ngày *</label>
+                        <input type="date" id="search-date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="search-time" class="form-label">Giờ bắt đầu *</label>
+                        <input type="time" id="search-time" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="search-duration" class="form-label">Giờ kết thúc *</label>
+                    <input type="time" id="search-duration" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--outline cancel-btn">Hủy</button>
+                    <button type="submit" class="btn btn--primary">Tìm kiếm</button>
+                </div>
+            </form>
+            <div class="search-results hidden" id="search-results">
+                <h4>Kết quả tìm kiếm</h4>
+                <div class="results-list" id="results-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal hidden" id="booking-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Đặt chỗ đỗ xe</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="booking-details" id="booking-details">
+                <!-- Booking details will be populated by JavaScript -->
+            </div>
+            <form class="booking-form" id="booking-form">
+                <div class="form-group">
+                    <label for="service-type" class="form-label">Loại dịch vụ *</label>
+                    <select id="service-type" class="form-control" required>
+                        <option value="">Chọn loại dịch vụ</option>
+                        <option value="standard">Tiêu chuẩn - 35.000đ (2 giờ đầu)</option>
+                        <option value="premium">Cao cấp - 40.000đ (2 giờ đầu)</option>
+                        <option value="weekly">Gói tuần - 30.000đ (2 giờ đầu)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking-date" class="form-label">Ngày đỗ xe *</label>
+                    <input type="date" id="booking-date" class="form-control" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-start-time" class="form-label">Giờ bắt đầu *</label>
+                        <input type="time" id="booking-start-time" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-duration" class="form-label">Thời gian (giờ) *</label>
+                        <select id="booking-duration" class="form-control" required>
+                            <option value="">Chọn thời gian</option>
+                            <option value="1">1 giờ</option>
+                            <option value="2">2 giờ</option>
+                            <option value="3">3 giờ</option>
+                            <option value="4">4 giờ</option>
+                            <option value="6">6 giờ</option>
+                            <option value="8">8 giờ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name" class="form-label">Họ và tên *</label>
+                    <input type="text" id="customer-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone" class="form-label">Số điện thoại *</label>
+                    <input type="tel" id="customer-phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email" class="form-label">Email *</label>
+                    <input type="email" id="customer-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-info" class="form-label">Thông tin xe *</label>
+                    <input type="text" id="vehicle-info" class="form-control" placeholder="Ví dụ: Honda City màu trắng, biển số 51G-12345" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method" class="form-label">Phương thức thanh toán *</label>
+                    <select id="payment-method" class="form-control" required>
+                        <option value="">Chọn phương thức</option>
+                        <option value="momo">Ví MoMo</option>
+                        <option value="zalopay">ZaloPay</option>
+                        <option value="banking">Chuyển khoản ngân hàng</option>
+                        <option value="cash">Thanh toán tại chỗ</option>
+                    </select>
+                </div>
+                <div class="total-price" id="total-price">
+                    <strong>Tổng tiền: <span id="price-amount">0đ</span></strong>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--outline cancel-btn">Hủy</button>
+                    <button type="submit" class="btn btn--primary">Xác nhận đặt chỗ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Parking Modal -->
+    <div class="modal hidden" id="register-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Đăng ký cho thuê chỗ đỗ xe</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="register-form" id="register-form">
+                <div class="form-section">
+                    <h4>Thông tin chủ sở hữu</h4>
+                    <div class="form-group">
+                        <label for="owner-name" class="form-label">Họ và tên *</label>
+                        <input type="text" id="owner-name" class="form-control" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="owner-phone" class="form-label">Số điện thoại *</label>
+                            <input type="tel" id="owner-phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="owner-email" class="form-label">Email *</label>
+                            <input type="email" id="owner-email" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h4>Thông tin bãi đỗ xe</h4>
+                    <div class="form-group">
+                        <label for="parking-name" class="form-label">Tên bãi đỗ xe *</label>
+                        <input type="text" id="parking-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parking-address" class="form-label">Địa chỉ *</label>
+                        <input type="text" id="parking-address" class="form-control" placeholder="Ví dụ: Hẻm 123 Đường ABC, Phường XYZ" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parking-capacity" class="form-label">Số chỗ đỗ *</label>
+                            <input type="number" id="parking-capacity" class="form-control" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parking-price" class="form-label">Giá thuê (VND/giờ) *</label>
+                            <input type="number" id="parking-price" class="form-control" min="1000" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parking-open" class="form-label">Giờ mở cửa *</label>
+                            <input type="time" id="parking-open" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parking-close" class="form-label">Giờ đóng cửa *</label>
+                            <input type="time" id="parking-close" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="parking-description" class="form-label">Mô tả</label>
+                        <textarea id="parking-description" class="form-control" rows="3" placeholder="Mô tả về vị trí, tiện ích, đặc điểm của bãi đỗ xe..."></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn--outline cancel-btn">Hủy</button>
+                    <button type="submit" class="btn btn--primary">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message hidden" id="success-message">
+        <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h3 id="success-title">Thành công!</h3>
+            <p id="success-text">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
